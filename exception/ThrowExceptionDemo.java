@@ -65,7 +65,9 @@ public class ThrowExceptionDemo {
 		try{ c.run();
 		
 		}catch (FileNotFoundException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			System.out.println("out.txt 파일은 설정 파일 입니다. 이 파일이 프로잭트 루트 디렉토리에 존재해야 합니다.");
+		       
 		}catch (IOException e) {
 			e.printStackTrace();
 		}
