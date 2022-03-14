@@ -28,29 +28,33 @@ class B {
 }
 
 */
-class B{
-	
-    void run() throws IOException, FileNotFoundException{
-        BufferedReader bReader = null;
-        String input = null;
-        bReader = new BufferedReader(new FileReader("out.txt"));
-        input = bReader.readLine();
-        System.out.println(input); 
-    }
+
+class B {
+
+	void run() throws IOException, FileNotFoundException {
+		BufferedReader bReader = null;
+		String input = null;
+		bReader = new BufferedReader(new FileReader("out.txt"));
+		input = bReader.readLine();
+		System.out.println(input);
+	}
 }
 
+/*
+ * class C {
+ * 
+ * void run() { B b = new B(); try{ b.run();
+ * 
+ * } catch(FileNotFoundException e) { e.printStackTrace(); } catch (IOException
+ * e) { e.printStackTrace(); } } }
+ */
 
 class C {
 
-	void run() {
+	void run() throws IOException, FileNotFoundException{
 		B b = new B();
-		try{ b.run();
-		
-		} catch(FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		b.run();
+
 	}
 }
 
@@ -58,6 +62,12 @@ public class ThrowExceptionDemo {
 
 	public static void main(String[] args) {
 		C c = new C();
-		c.run();
+		try{ c.run();
+		
+		}catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
