@@ -6,10 +6,12 @@ interface FRUIT{
 }
 
 interface COMPANY{
-	int GOOGLE = 1, APPLE = 2, ORANGE = 3;
+	int GOOGLE = 1, APPLE = 2, ORACLE = 3;
 }
 */
 
+
+/*
 class Fruit{
 	//int APPLE = 1, PEACH = 2, BANANA = 3;
 	public static final Fruit APPLE = new Fruit();
@@ -22,10 +24,17 @@ class Company{
 
 	public static final Fruit GOOGLE = new Fruit();
 	public static final Fruit APPLE = new Fruit();
-	public static final Fruit ORANGE = new Fruit();
+	public static final Fruit ORACLE = new Fruit();
 	
 }
+*/
 
+enum Fruit{
+	APPLE, PEACH, BANANA
+}
+enum Company{
+	GOOGLE, APPLE, ORACLE
+}
 public class ConstantDemo {
 /*
 	// fruit
@@ -60,13 +69,13 @@ public class ConstantDemo {
 		Fruit type = Fruit.APPLE;
 		
 		switch (type) {
-		case Fruit.APPLE:
+		case APPLE:
 			System.out.println(57 + " kcal");
 			break;
-		case Fruit.PEACH:
+		case PEACH:
 			System.out.println(34 + " kcal");
 			break;
-		case Fruit.BANANA:
+		case BANANA:
 			System.out.println(93 + " kcal");
 			break;
 		}
