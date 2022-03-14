@@ -1,5 +1,16 @@
 package org.opentutorials.javatutorials.exception;
 
+class DivideException extends RuntimeException{
+	public DivideException() {
+		// TODO Auto-generated constructor stub
+		super();
+	}
+	DivideException(String message){
+		super(message);
+	}
+	
+}
+
 class Calculator {
 	int left, right;
 
@@ -17,7 +28,8 @@ class Calculator {
 
 	public void divide() {
 		if(right ==0) {
-			throw new ArithmeticException("0으로 나누는것은 허용되지 않습니다.");
+//			throw new ArithmeticException("0으로 나누는것은 허용되지 않습니다.");
+			throw new DivideException("0으로 나누는것은 허용되지 않습니다.");
 	        
 		}
 		try {
